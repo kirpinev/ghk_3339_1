@@ -1,12 +1,12 @@
 import { ButtonMobile } from "@alfalab/core-components/button/mobile";
 import { Typography } from "@alfalab/core-components/typography";
+import { Radio } from "@alfalab/core-components/radio";
 import { useCallback, useState } from "react";
 
 import alfa from "./assets/alfa-card.png";
 import { LS, LSKeys } from "./ls";
 import { appSt } from "./style.css";
 import { ThxLayout } from "./thx/ThxLayout";
-import { Radio } from "@alfalab/core-components/radio";
 
 export const App = () => {
   const [loading, setLoading] = useState(false);
@@ -50,9 +50,10 @@ export const App = () => {
         </Typography.TitleResponsive>
 
         <Radio
+          className={appSt.radio}
           size={24}
           checked={true}
-          label="Альфа-чек — 99 руб. в месяц"
+          label="Альфа чек — 99 руб. в месяц"
           disabled={false}
           hint="Присылаем пуш-уведомления, если не доходят — отправляем смс"
           block={true}
@@ -61,7 +62,7 @@ export const App = () => {
 
       <div className={appSt.bottomBtn}>
         <ButtonMobile loading={loading} block view="primary" onClick={submit}>
-          Продолжить
+          Подключить
         </ButtonMobile>
       </div>
     </>

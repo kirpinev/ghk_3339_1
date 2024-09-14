@@ -24,8 +24,13 @@ const box = style({
   border: "2px solid #F3F4F5",
 });
 
+const radio = style({
+  maxWidth: '272px'
+})
+
 export const appSt = {
   bottomBtn,
   container,
   box,
+  radio
 };
