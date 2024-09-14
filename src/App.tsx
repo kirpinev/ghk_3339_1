@@ -6,7 +6,6 @@ import alfa from "./assets/alfa-card.png";
 import { LS, LSKeys } from "./ls";
 import { appSt } from "./style.css";
 import { ThxLayout } from "./thx/ThxLayout";
-import { sendDataToGA } from "./utils/events";
 import { Radio } from "@alfalab/core-components/radio";
 
 export const App = () => {
