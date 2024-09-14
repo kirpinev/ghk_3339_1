@@ -9,11 +9,11 @@ const container = style({
   textAlign: 'center',
 });
 
-const rocket = style({
-  marginTop: '9rem',
+const heart = style({
+  marginTop: '2rem',
 });
 
 export const thxSt = {
   container,
-  rocket,
+  heart,
 };
