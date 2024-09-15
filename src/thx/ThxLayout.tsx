@@ -8,7 +8,7 @@ export const ThxLayout = () => {
   return (
       <>
         <div className={thxSt.container}>
-          <img src={heart} width={135} className={thxSt.heart}/>
+          <img alt="Картинка сердца" src={heart} width={135} className={thxSt.heart}/>
           <Typography.TitleResponsive
               font="system"
               tag="h1"
@@ -19,7 +19,7 @@ export const ThxLayout = () => {
             Спасибо за участие в эксперименте
           </Typography.TitleResponsive>
           <Typography.Text tag="p" view="primary-medium" defaultMargins={false}>
-            Сервис находится в разработке. Как только он будет доступен,мы
+            Сервис находится в разработке. Как только он будет доступен, мы
             обязательно вам сообщим.
           </Typography.Text>
         </div>

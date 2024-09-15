@@ -1,4 +1,4 @@
-import { style } from "@vanilla-extract/css";
+import {globalStyle, style } from "@vanilla-extract/css";
 
 const bottomBtn = style({
   position: "fixed",
@@ -27,6 +27,11 @@ const box = style({
 const radio = style({
   maxWidth: '272px'
 })
+
+globalStyle(`${radio} > span > span:first-child`, {
+  fontWeight: "500",
+});
+
 
 export const appSt = {
   bottomBtn,
