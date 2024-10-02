@@ -7,6 +7,7 @@ import alfa from "./assets/alfa-card.png";
 import { LS, LSKeys } from "./ls";
 import { appSt } from "./style.css";
 import { ThxLayout } from "./thx/ThxLayout";
+import { sendDataToGA } from "./utils/events.ts";
 
 export const App = () => {
   const [loading, setLoading] = useState(false);
@@ -14,8 +15,7 @@ export const App = () => {
 
   const submit = useCallback(() => {
     setLoading(true);
-    // sendDataToGA({})
-    Promise.resolve().then(() => {
+    sendDataToGA({ sub_choice: "AlfaCheck", sub_hidden: "No" }).then(() => {
       LS.setItem(LSKeys.ShowThx, true);
       setThx(true);
       setLoading(false);
@@ -29,8 +29,15 @@ export const App = () => {
   return (
     <>
       <div className={appSt.container}>
-        <div  style={{ display: "flex", alignItems: "center", marginTop: "1.5rem" }}>
-          <img alt="Картинка карты" src={alfa} height={48} style={{ objectFit: "contain" }} />
+        <div
+          style={{ display: "flex", alignItems: "center", marginTop: "1.5rem" }}
+        >
+          <img
+            alt="Картинка карты"
+            src={alfa}
+            height={48}
+            style={{ objectFit: "contain" }}
+          />
           <Typography.Text
             style={{ maxWidth: "230px", marginLeft: "18px" }}
             view="primary-medium"
